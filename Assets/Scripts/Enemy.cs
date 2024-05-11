@@ -5,12 +5,12 @@ public class Enemy : MonoBehaviour
 {
     public event Action<Enemy> OnTargetReached;
 
-    private float _speed = 80;
+    private float _speed = 200;
     private Transform _target;
 
-    public void Init(Vector3 spawnPoin, Transform target)
+    public void Init(SpawnPoint spawnPoint, Transform target)
     {
-        transform.position = spawnPoin;
+        transform.position = spawnPoint.transform.position;
         _target = target;
     }
 

@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 public class Pool : MonoBehaviour
 {
     private int _startSize = 5;
-    private int _maxSize = 10;
+    private int _maxSize = 15;
 
     private ObjectPool<Enemy> _poolEnemies;
 
@@ -21,7 +21,7 @@ public class Pool : MonoBehaviour
             );
     }
 
-    public Enemy TakeObject(Vector3 spawnPoint, Transform target)
+    public Enemy TakeObject(SpawnPoint spawnPoint, Transform target)
     {
         Enemy enemy = _poolEnemies.Get();
         enemy.Init(spawnPoint, target);
