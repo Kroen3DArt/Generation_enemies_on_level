@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class TargetMower : MonoBehaviour
 {
-    [SerializeField] private Transform _startPoint;
-    [SerializeField] private Transform _endPoint;
+    [SerializeField] private Transform[] _movePoints;
     [SerializeField] private float _speed = 45;
 
     private Transform _target;
+    private int _firstPoint = 0;
+    private int _secondPoint = 1;
 
     private void Start()
     {
-        _target = _endPoint;
+        _target = _movePoints[_firstPoint];
     }
 
     private void Update()
@@ -19,10 +20,10 @@ public class TargetMower : MonoBehaviour
 
         if (transform.position == _target.position)
         {
-            if (_target == _endPoint)
-                _target = _startPoint;
+            if (_target == _movePoints[_firstPoint])
+                _target = _movePoints[_secondPoint];
             else
-                _target = _endPoint;
+                _target = _movePoints[_firstPoint];
         }
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public event Action<Enemy> TargetReached;
-
     private float _speed = 200;
     private Transform _target;
+
+    public event Action<Enemy> TargetReached;
 
     public void Init(SpawnPoint spawnPoint, Transform target)
     {

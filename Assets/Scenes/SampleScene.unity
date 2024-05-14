@@ -407,8 +407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfd58661cb3df4eaae35893f861096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startPoint: {fileID: 261736994}
-  _endPoint: {fileID: 438165219}
+  _movePoints:
+  - {fileID: 261736994}
+  - {fileID: 438165219}
   _speed: 45
 --- !u!1 &261736993
 GameObject:
@@ -1354,8 +1355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfd58661cb3df4eaae35893f861096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startPoint: {fileID: 1491781272}
-  _endPoint: {fileID: 718702026}
+  _movePoints:
+  - {fileID: 1491781272}
+  - {fileID: 718702026}
   _speed: 45
 --- !u!1 &1491781271
 GameObject:
@@ -1625,8 +1627,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bfd58661cb3df4eaae35893f861096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startPoint: {fileID: 1589198553}
-  _endPoint: {fileID: 1896630665}
+  _movePoints:
+  - {fileID: 1589198553}
+  - {fileID: 1896630665}
   _speed: 45
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
