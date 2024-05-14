@@ -15,11 +15,13 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnWithDelay()
     {
+        WaitForSeconds wait = new WaitForSeconds(_delay);
+
         while (true)
         {
             _currentPoint = GetSpawnPosition();
             _currentPoint.Spawn();
-            yield return new WaitForSeconds(_delay);
+            yield return wait;
         }
     }
 

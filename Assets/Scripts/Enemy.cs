@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public event Action<Enemy> OnTargetReached;
+    public event Action<Enemy> TargetReached;
 
     private float _speed = 200;
     private Transform _target;
@@ -20,6 +20,6 @@ public class Enemy : MonoBehaviour
         transform.LookAt(_target);
 
         if (transform.position == _target.position)
-            OnTargetReached?.Invoke(this);
+            TargetReached?.Invoke(this);
     }
 }

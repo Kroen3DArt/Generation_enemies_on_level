@@ -15,12 +15,12 @@ public class SpawnPoint : MonoBehaviour
     public void Spawn()
     {
         Enemy enemy = _pool.TakeObject(this, _targetPoint);
-        enemy.OnTargetReached += ReturnObjectToPool;
+        enemy.TargetReached += ReturnObjectToPool;
     }
 
     private void ReturnObjectToPool(Enemy enemy)
     {
-        enemy.OnTargetReached -= ReturnObjectToPool;
+        enemy.TargetReached -= ReturnObjectToPool;
         _pool.ReleaseObject(enemy);
     }
 }
